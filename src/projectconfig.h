@@ -90,6 +90,10 @@ extern "C" {
     #ifdef CFG_BRD_RF1GHZUSB
       #include "boards/rf1ghzusb/board_rf1ghzusb.h"
     #endif
+    #ifdef CFG_BRD_RFIDIO_LPC1347_REF
+      #include "boards/rfidio1347ref/board_rfidio1347ref.h"
+    #endif
+
 /*=========================================================================*/
 
 
@@ -97,7 +101,8 @@ extern "C" {
     CONFIG FILE VALIDATION
     -----------------------------------------------------------------------*/
     #if !defined CFG_BRD_LPCXPRESSO_LPC1347 && \
-        !defined CFG_BRD_RF1GHZUSB
+        !defined CFG_BRD_RF1GHZUSB && \
+        !defined CFG_BRD_RFIDIO_LPC1347_REF
       #error "You must define a target board in projectconfig.h"
     #endif
 /*=========================================================================*/
